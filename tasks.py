@@ -9,7 +9,7 @@ celery.conf.update(
         CELERY_RESULT_DBURI = "sqlite:///my.db",
         CELERY_IMPORTS = ("tasks", ),
 )
-
+  
 @celery.task(name="tasks.add")
 def add(x, y):
     return x + y
